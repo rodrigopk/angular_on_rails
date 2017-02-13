@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Problems encoutered on windows:
+* 4.1 - rspec 
+ - rails generate rspec:install will not work with rspec 3.0; downgrade to 2.8 (open issue https://github.com/rspec/rspec-rails/issues/1555)
