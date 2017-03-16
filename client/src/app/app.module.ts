@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { Angular2TokenService } from 'angular2-token';
 
+import { AuthGuard } from './auth-guard';
 import { HomeLibraryRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewUserComponent } from './new-user/new-user.component';
 import { NewUserFormComponent } from './new-user-form/new-user-form.component';
 import { NewUserSessionComponent } from './new-user-session/new-user-session.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { NewUserSessionComponent } from './new-user-session/new-user-session.com
     NewUserComponent,
     NewUserComponent,
     NewUserFormComponent,
-    NewUserSessionComponent
+    NewUserSessionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { NewUserSessionComponent } from './new-user-session/new-user-session.com
     HttpModule,
     HomeLibraryRoutingModule
   ],
-  providers: [Angular2TokenService],
+  providers: [Angular2TokenService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

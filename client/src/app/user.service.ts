@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 
 @Injectable()
 export class UserService {
 
-  constructor(private _tokenService: Angular2TokenService) { 
+  constructor(private _tokenService: Angular2TokenService,private router: Router) { 
     this._tokenService.init({
       registerAccountPath: '/api/auth',
       validateTokenPath: '/api/auth/validate_token',
@@ -19,6 +20,7 @@ export class UserService {
     }).subscribe(
         res => {
             console.log(res);
+            this.router.navigate(['']);
         },
         error =>    console.log(error)
     );
