@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { BookService } from './../book.service';
@@ -11,7 +12,10 @@ import { Book } from '../book'
 export class BookFormComponent implements OnInit {
   book = new Book('new book');
 
-  constructor(private bookService: BookService) { }
+  constructor(
+      private bookService: BookService,
+      private router: Router
+    ) { }
 
   ngOnInit() {
   }
@@ -20,7 +24,8 @@ export class BookFormComponent implements OnInit {
     this.bookService.save(this.book)
       .subscribe(
         response => {
-          console.log(response);  
+          console.log(response); 
+          this.router.navigate(['']); 
         }
       );
   }
