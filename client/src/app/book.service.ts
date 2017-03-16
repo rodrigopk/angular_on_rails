@@ -10,6 +10,11 @@ export class BookService {
     return this.http.get('/api/books.json');
   }
 
+  delete(book) {
+    return this.http.delete('/api/books/' + book.id + '.json');
+  }
+
+
   save(_book){
     let body = JSON.stringify({ book:_book });
     let headers = new Headers({ 'Content-type': 'application/json' });
