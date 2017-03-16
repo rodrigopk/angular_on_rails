@@ -12,6 +12,7 @@ import { NewUserComponent } from './new-user/new-user.component';
 import { NewUserFormComponent } from './new-user-form/new-user-form.component';
 import { NewUserSessionComponent } from './new-user-session/new-user-session.component';
 import { HomeComponent } from './home/home.component';
+import { BookListComponent } from './book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     NewUserComponent,
     NewUserFormComponent,
     NewUserSessionComponent,
-    HomeComponent
+    HomeComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
