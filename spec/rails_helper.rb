@@ -51,4 +51,8 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.include FactoryGirl::Syntax::Methods
+
+  config.before(:all, type: :feature) do
+    system('cd client && ng build')
+  end
 end

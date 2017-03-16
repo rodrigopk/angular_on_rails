@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 })
 
 export class AppComponent {
-  title = 'app works!';
+  title = 'Books';
 
   constructor(private userService: UserService) {
   }
