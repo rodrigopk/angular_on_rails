@@ -13,6 +13,7 @@ import { NewUserFormComponent } from './new-user-form/new-user-form.component';
 import { NewUserSessionComponent } from './new-user-session/new-user-session.component';
 import { HomeComponent } from './home/home.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { BookFormComponent } from './book-form/book-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BookListComponent } from './book-list/book-list.component';
     NewUserFormComponent,
     NewUserSessionComponent,
     HomeComponent,
-    BookListComponent
+    BookListComponent,
+    BookFormComponent
   ],
   imports: [
     BrowserModule,
